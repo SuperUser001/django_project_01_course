@@ -1,0 +1,41 @@
+1) django-admin is Django’s command-line utility for administrative tasks
+
+django-admin startproject <name_project>
+Создается пакет с заданным именем
+<name_project> -> <name_project> папка - пакет конфигурации (в нем находится конфигурация всего приложения)
+
+manage.py - специальный файл утилиты, используемый для различных действия с проектом
+по сути вызывает команду django-admin
+______
+модули, связывающие проект с веб-сервером:
+asgi.py
+wsgi.py
+______
+
+settings.py -  модуль с настройками проекта, который содержит подключение к БД, пути к папкам, настройки даты,
+времени, локализации и т.д.
+
+urls.py - файл с маршрутами проекта
+________________________________
+cd mysite
+python manage.py runserver -- запускается отладочный веб-сервер, который есть в составе джанго
+по адресу  http://127.0.0.1:8000/
+
+python manage.py runserver <number_port>
+python manage.py runserver <adress:port> без http://
+_______________________________________
+Для старта с возможностью отладки: add new configuration (example, "Debug")
+Script path: .....path.../manage.py
+Parameters: runserver
+
+___________________________
+startproject
+
+_________________
+python manage.py startapp news -- создается ещё одна папка с приложением "news"
+_________
+mysite -> mark directory as -> source root -- указать папку корневой для корректных директорий
+
+sqllite studio
+
+Миграции - это модуль, который создает джанго на основе модели
